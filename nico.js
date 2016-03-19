@@ -15,10 +15,12 @@ var $ = function() {
 }
 
 //类库
-function Base() {};
-
- Base.prototype.elements = [];
+function Base() {
+  this.elements = [];
   
+};
+
+
   Base.prototype.getId = function(id) {
     this.elements.push(document.getElementById(id));
     return this;
@@ -95,5 +97,28 @@ Base.prototype.getElement = function(num){
   var element = this.elements[num];
   this.elements = [];
   this.elements[0] = element;
+  return this;
+}
+
+//添加class
+Base.prototype.addClass = function (className) {
+  for(var i = 0;i < this.elements.length;i ++){
+     if(!this.elements[i].className.match(new RegExp('(\\s|^)'+className+'(\\s|$)'))){
+        this.elements[i].className +=" "+className;
+     }
+     
+  }
+  return this;
+}
+
+//移除class
+Base.prototype.removeClass = function(className){
+  for(var i = 0;i < this.elements.length;i ++){
+     if(this.elements[i].className.match(new RegExp('(\\s|^)'+className+'(\\s|$)'))){
+      this.elements[i].className = this.elements[i].className.
+                                    replace(new RegExp('(\\s|^)'+className+'(\\s|$)'),"")
+     }
+     
+  }
   return this;
 }
