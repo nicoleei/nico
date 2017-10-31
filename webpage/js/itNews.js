@@ -4,16 +4,18 @@ window.onload = function(){
     }
 
     var J_header = {
+
        dom : $("J_header"),
-       gofix:function(){
-          alert(1)
+       gofix:function(e){
+          
+
+          
        },
        init:function(){
-          $("J_header").addEventListener("scroll",function(){
-              alert(1)
-          })
+        var _self = this;
+         document.addEventListener("scroll",_self.gofix)
        }
-       
+      
     }
     J_header.init()
    

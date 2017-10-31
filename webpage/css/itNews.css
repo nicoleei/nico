@@ -8,6 +8,9 @@ header{width:100%;
   margin:0;
   /*background:green;*/
   box-shadow:0 3px 8px rgba(7,17,27,0.5);
+  position:fixed;
+  top:0;
+  z-index:10;
 }
 .wrap{
   width:75%;
@@ -61,7 +64,7 @@ a{text-decoration:none;}
 .detailTitle{font-size:16px;padding-left:10px;}
 .detailTitle a{color:#4D555D;margin-right:20px;display:inline-block;height:32px;line-height:32px;}
 .detailTitle a:hover{color:#f01414;}
-main{/*background:#eee;*/width:59%;margin:0 auto;clear:both;}
+main{width:59%;margin:80px auto;clear:both;}
 .banner-box{position:relative;box-shadow:0 3px 8px rgba(7,17,27,0.5); }
 .imgbox{overflow:hidden;padding-left:0;height:492px;}
 .imgbox li{display:flex;justify-content: center;align-items:center;width:100%;
@@ -132,5 +135,6 @@ position:absolute;}
      display:flex;
      justify-content:start;
    }
-   .frendweb .links{flex:1;}
+   .frendweb .links{flex:1;text-overflow:ellipsis;overflow:hidden;white-space:nowrap;}
    .frendweb .links a{color:#4D555D;font-size:12px;}
+   .frendweb .links a:hover{color:red;text-decoration: underline}
