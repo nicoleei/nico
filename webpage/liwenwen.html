@@ -6,6 +6,7 @@
   <link rel="stylesheet" type="text/css" href="css/normalize.css">
   <link rel="stylesheet" type="text/css" href="css/iTNews.css">
   <link rel="stylesheet" type="text/css" href="font-awesome-4.7.0/font-awesome-4.7.0/css/font-awesome.min.css">
+  <script type="text/javascript" src="http://libs.baidu.com/jquery/1.10.2/jquery.min.js"></script>
   <style type="text/css">
   </style>
 </head>
@@ -43,7 +44,7 @@
            </ul>
            <!-- 二级菜单 -->
             <div class="subbox" id="sub">
-              <div class="classfication amhide" data_log=1>
+              <div class="classfication amhide" flag=1>
                   <div>
                     <div class="smalltitle">
                        <span>基础</span>
@@ -71,7 +72,7 @@
                     </div>
                   </div>
               </div>
-              <div class="classfication amhide" data_log=2>
+              <div class="classfication amhide" flag=2>
                   <div>
                     <div class="smalltitle">
                        <span>基础</span>
@@ -99,7 +100,7 @@
                     </div>
                   </div>
               </div>
-              <div class="classfication amhide" data_log=3>
+              <div class="classfication amhide" flag=3>
                   <div>
                     <div class="smalltitle">
                        <span>基础</span>
@@ -127,7 +128,7 @@
                     </div>
                   </div>
               </div>
-               <div class="classfication amhide" data_log=4>
+               <div class="classfication amhide" flag=4>
                   <div>
                     <div class="smalltitle">
                        <span>基础</span>
@@ -155,7 +156,7 @@
                     </div>
                   </div>
               </div>
-              <div class="classfication amhide" data_log=5>
+              <div class="classfication amhide" flag=5>
                   <div>
                     <div class="smalltitle">
                        <span>基础</span>
@@ -199,18 +200,18 @@
    <main>
       <div class="banner-box">
          <ul class="imgbox">
-           <li style="opacity:0"><img src="imgs/1.png"/></li>
-           <li><img src="./imgs/2.png"/></li>
-           <li><img src="./imgs/3.png"/></li>
+          <li flag="1"><img src="imgs/1.png"/></li>
+           <li flag ="2" style="opacity:0"><img src="./imgs/2.png"/></li>
+           <li flag="3" style="opacity:0"><img src="./imgs/3.png"/></li>
          </ul>
          <div class="buttonbox">
-           <span></span>
-           <span></span>
-           <span></span>
+           <span flag="1"></span>
+           <span flag="2"></span>
+           <span flag="3"></span>
          </div>
          
-         <div class="left"><i class="fa fa-angle-left fa-2x"></i></div>
-         <div class="right"><i class="fa fa-angle-right fa-2x"></i></div>
+         <div class="left" id="J_left"><i class="fa fa-angle-left fa-2x"></i></div>
+         <div class="right" id="J_right"><i class="fa fa-angle-right fa-2x"></i></div>
         
       </div>
 
