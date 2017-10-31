@@ -120,18 +120,25 @@ window.onload = function(){
    Showbox.prototype.bindDOM = function(){
       let _self = this;
       let lisnode = _self.dom.getElementsByTagName("li");
-     
+       
   
     
       let goHover = function(e){
-          $("sub").setAttribute("class","classfication")
+          // $("sub").setAttribute("class","classfication")
+          var ev = ev || window.event;
+          var target = ev.target||ev.srcElement;
+          if(target.nodeName.toLowerCase() == 'li'){
+             var flag = target.getAttribute("flag")
+             console.log(flag)
+          }
+         
          
       } 
 
 
       let goLeave = function(e){
-          
-          $("sub").setAttribute("class","classfication amhide")
+         
+          // $("sub").setAttribute("class","classfication")
       }
       let newlisArr = makeArray(lisnode)
        
