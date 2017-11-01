@@ -63,25 +63,25 @@ $(function(){
           var index;
           $.map($("#J_imgbox li"),function(item){
             
-             if($(item).css("opacity")==1){
+             if($(item).css("opacity")!=0){
                 index = $(item).attr("flag") - 0 ;
                 
              }
-             $(item).css({"opacity":0,"transition":"opacity .5s"});
+             $(item).css({"opacity":0,"transition":"opacity .3s"});
              
           })
           index -=2
           if(index<0){
               index = 2
           }
-           $("#J_imgbox li").eq(index).css({"opacity":1,"transition":"opacity .5s"})
+           $("#J_imgbox li").eq(index).css({"opacity":1,"transition":"opacity .3s"})
        },
        
        goRight:function(){
           var index;
           $.map($("#J_imgbox li"),function(item){
             
-             if($(item).css("opacity")==1){
+             if($(item).css("opacity")!=0){
                 index = $(item).attr("flag") - 0 ;
                 
              }
