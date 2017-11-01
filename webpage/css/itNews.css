@@ -47,7 +47,7 @@ header{width:100%;
 
 .itUl li h4:hover{color:#07111b;}
 .classfication{position:absolute; top:60px;left:62px;background-color:#f8f8f8;width:500px;padding:20px 20px;
-  font-size:12px;background-color:#fff; 
+  font-size:12px;background-color:#fff; border-radius:5px;
 }
 .classfication>div{padding:0 20px 20px;position:relative;margin-bottom: 20px}
 .classfication span{display:inline-block;position:absolute;left:18px;top:-17px;background:#f8f8f8;background-color:#fff;

@@ -38,16 +38,16 @@ $(function(){
          
        },
        goMouseLeave:function(){
-          // $(this).delegate("li","mouseleave",function(){
-              $.map($(".classfication"),function(item){
+         
+          $.map($(".classfication"),function(item){
 
-                  if(!$(item).hasClass("amhide")){
-                     
-                      $(item).addClass("amhide")
-                  }
-                
-             })
-          // })
+              if(!$(item).hasClass("amhide")){
+                 
+                  $(item).addClass("amhide")
+              }
+            
+         })
+        
        },
 
        init:function(){
@@ -58,11 +58,61 @@ $(function(){
 
     }
 
+    var J_imgbox = {
+       goLeft:function(){
+          var index;
+          $.map($("#J_imgbox li"),function(item){
+            
+             if($(item).css("opacity")==1){
+                index = $(item).attr("flag") - 0 ;
+                
+             }
+             $(item).css({"opacity":0,"transition":"opacity .5s"});
+             
+          })
+          index -=2
+          if(index<0){
+              index = 2
+          }
+           $("#J_imgbox li").eq(index).css({"opacity":1,"transition":"opacity .5s"})
+       },
+       
+       goRight:function(){
+          var index;
+          $.map($("#J_imgbox li"),function(item){
+            
+             if($(item).css("opacity")==1){
+                index = $(item).attr("flag") - 0 ;
+                
+             }
+             $(item).css({"opacity":0,"transition":"opacity 0.5s"});
+             
+          })
+       
+          if(index>=3){
+              index=0
+            }
+          $("#J_imgbox li").eq(index).css({"opacity":1,"transition":"opacity 0.5s"})
+           
+       },
+       init:function(){
+          
+          $("#J_right").click(this.goRight);
+          $("#J_left").click(this.goLeft);
+
+       }
+
+
+    }
+
 
     //搜索框聚焦和失去焦点
     J_title.init()
-    //二级菜单显示
+    //二级菜单显示和隐藏
     J_test.init()
+
+    //图片轮播
+    J_imgbox.init()
 })
 
 
