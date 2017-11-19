@@ -124,30 +124,30 @@ $(function(){
         }) 
      },
      goLeft:function(){
-        //  let imgbox = $("#J_imgbox");
-        // let imgWth = imgbox.width();
-        // // let oldulLeft = (imgbox.css("left")).replace(/[^0-9]/ig,"") - 0;
-        // let oldulLeft = (imgbox.css("left")).substring(0,(imgbox.css("left")).length-2) - 0;
-        // let newulLeft = oldulLeft + imgWth;
-        // if(oldulLeft>=imgWth){
-        //     newulLeft = -imgWth*2;
-        //     imgbox.css({
-        //        left:newulLeft+"px",
-        //        transition:"left 0s"
-        //     })
-        //     newulLeft = (imgbox.css("left")).substring(0,(imgbox.css("left")).length-2)-0+imgWth;
-        //     imgbox.css({
-        //        left:newulLeft+"px",
-        //        transition:"left 1s"
-        //     })
+         let imgbox = $("#J_imgbox");
+        let imgWth = imgbox.width();
+        // let oldulLeft = (imgbox.css("left")).replace(/[^0-9]/ig,"") - 0;
+        let oldulLeft = (imgbox.css("left")).substring(0,(imgbox.css("left")).length-2) - 0;
+        let newulLeft = oldulLeft + imgWth;
+        if(oldulLeft>=imgWth){
+            newulLeft = -imgWth*2;
+            imgbox.css({
+               left:newulLeft+"px",
+               transition:"left 0s"
+            })
+            newulLeft = (imgbox.css("left")).substring(0,(imgbox.css("left")).length-2)-0+imgWth;
+            imgbox.css({
+               left:newulLeft+"px",
+               transition:"left 1s"
+            })
           
           
-        // }
+        }
        
-        // imgbox.css({
-        //    left:newulLeft+"px",
-        //    transition:"left 1s"
-        // })
+        imgbox.css({
+           left:newulLeft+"px",
+           transition:"left 1s"
+        })
 
 
      },
@@ -162,13 +162,13 @@ $(function(){
         if(Math.abs(newOldLeft.replace(/[^0-9]/ig,"")-0)>ulWidth*3){
 
           // let img1l = oldoldulLeftWidthNum -ulWidth*1 +"px";
-          newOldLeft = 0;
+          newOldLeft = "0px";
           
            $("#J_imgbox").css({
              "left":newOldLeft,
              "transition":"left 0s"
            })
-
+          console.log($("#J_imgbox").css("left"))
           newOldLeft = 0- ulWidth + "px";
 
            // $("#J_imgbox").css({
