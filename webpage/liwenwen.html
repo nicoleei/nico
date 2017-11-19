@@ -8,12 +8,28 @@
   <link rel="stylesheet" type="text/css" href="font-awesome-4.7.0/font-awesome-4.7.0/css/font-awesome.min.css">
   <script type="text/javascript" src="http://libs.baidu.com/jquery/1.10.2/jquery.min.js"></script>
   <style type="text/css">
+  main{overflow:hidden;}
+@media (min-width: 768px) and (max-width:991px){ 
+
+} 
+@media (min-width: 992px) and (max-width:1199px) { 
+   
+ } 
+@media (min-width: 1200px) { 
+   /*超大屏幕*/
+ }
+
+@media (max-width: 767px) {
+    /*最大像素768的样式*/
+    .hidden-xs{display:none;}
+    .wrap{width:100%;}
+  }
   </style>
 </head>
 <body>
    <header id="J_header">
       <div class="wrap">
-         <div class="logo">
+         <div class="logo hidden-xs">
             <i></i>
             <h4>IT咨询网</h4>
          </div>
@@ -200,9 +216,12 @@
    <main>
       <div class="banner-box">
          <ul class="imgbox" id="J_imgbox">
-          <li flag="1"><img src="imgs/1.png"/></li>
-           <li flag ="2" style="opacity:0"><img src="./imgs/2.png"/></li>
-           <li flag="3" style="opacity:0"><img src="./imgs/3.png"/></li>
+            <li flag="-1"><img src="./imgs/3.png"/></li>
+            <li flag="1"><img src="imgs/1.png"/></li>
+        
+            <li flag ="2"><img src="./imgs/2.png"/></li>
+            <li flag="3"><img src="./imgs/3.png"/></li>
+            <li flag="4"><img src="imgs/1.png"/></li>
          </ul>
          <div class="buttonbox">
            <span flag="1"></span>
@@ -210,7 +229,7 @@
            <span flag="3"></span>
          </div>
          
-         <div class="left" id="J_left"><i class="fa fa-angle-left fa-2x"></i></div>
+         <div class="left" id="J_Left"><i class="fa fa-angle-left fa-2x"></i></div>
          <div class="right" id="J_right"><i class="fa fa-angle-right fa-2x"></i></div>
         
       </div>

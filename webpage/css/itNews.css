@@ -65,8 +65,8 @@ a{text-decoration:none;}
 .detailTitle a{color:#4D555D;margin-right:20px;display:inline-block;height:32px;line-height:32px;}
 .detailTitle a:hover{color:#f01414;}
 main{width:59%;margin:80px auto;clear:both;}
-.banner-box{position:relative;box-shadow:0 3px 8px rgba(7,17,27,0.5); }
-.imgbox{overflow:hidden;padding-left:0;height:492px;}
+.banner-box{position:relative;box-shadow:0 3px 8px rgba(7,17,27,0.5); overflow:hidden;}
+.imgbox{padding-left:0;height:492px;position:relative;left:0;}
 .imgbox li{display:flex;justify-content: center;align-items:center;width:100%;
 position:absolute;}
 
